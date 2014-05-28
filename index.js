@@ -26,9 +26,9 @@ var callbacks = new Map();
  * Based off of this StackOverflow answer:
  *   http://stackoverflow.com/a/14188699/376773
  *
- * @param {Element} el - DOM element
- * @param {Function} fn - callback function to invoke
- * @param {Function} a function to stop watching for "click outside" events for `el`
+ * @param {Element} el - DOM element to watch for outside clicks
+ * @param {Function} fn - callback function to invoke when user clicks outside of `el`
+ * @return {Function} a function to stop watching for "click outside" events for `el`
  * @api public
  */
 
