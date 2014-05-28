@@ -54,7 +54,6 @@ function globalClick (e) {
   while ((val = values.next()).done !== true) {
     var el = val.value[0];
     var fn = val.value[1];
-    //var level = 0;
 
     var inside = false;
     for (var element = e.target; element; element = element.parentNode) {
@@ -63,7 +62,6 @@ function globalClick (e) {
         inside = true;
         break;
       }
-      //level++;
     }
 
     if (inside) continue;
