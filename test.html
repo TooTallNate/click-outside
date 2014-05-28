@@ -32,12 +32,12 @@
 
       var x = document.getElementById('x');
       var stopX = clickOutside(x, function (e) {
-        console.log('click outside "x"');
+        console.log('click outside "x"', this, e);
       });
 
       var a = document.getElementById('a');
       var stopA = clickOutside(a, function (e) {
-        console.log('click outside "a"');
+        console.log('click outside "a"', this, e);
       });
 
       var stop = document.getElementById('stop');
