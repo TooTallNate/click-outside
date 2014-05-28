@@ -33,7 +33,7 @@ var callbacks = new Map();
  */
 
 function clickOutside (el, fn) {
-  callbacks.set(el, [ el, fn ]);
+  callbacks.set(el, fn);
 
   return function unbind () {
     callbacks.delete(el);
@@ -48,15 +48,15 @@ function clickOutside (el, fn) {
  */
 
 function globalClick (e) {
-  var values = callbacks.values();
-  var val;
+  var cur, el, fn, inside, element;
+  var entries = callbacks.entries();
 
-  while ((val = values.next()).done !== true) {
-    var el = val.value[0];
-    var fn = val.value[1];
-    var inside = false;
+  while ((cur = entries.next()).done !== true) {
+    el = cur.value[0];
+    fn = cur.value[1];
+    inside = false;
 
-    for (var element = e.target; element; element = element.parentNode) {
+    for (element = e.target; element; element = element.parentNode) {
       if (element === el) {
         // click inside
         inside = true;
