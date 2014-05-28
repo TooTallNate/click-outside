@@ -54,8 +54,8 @@ function globalClick (e) {
   while ((val = values.next()).done !== true) {
     var el = val.value[0];
     var fn = val.value[1];
-
     var inside = false;
+
     for (var element = e.target; element; element = element.parentNode) {
       if (element === el) {
         // click inside
