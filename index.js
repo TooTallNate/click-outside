@@ -67,7 +67,7 @@ function globalClick (e) {
     if (inside) continue;
 
     // click outside
-    fn(e);
+    fn.call(el, e);
   }
 }
 
