@@ -5,6 +5,7 @@
 
 var ev = require('event');
 var Map = require('es6-map');
+var within = require('within-element');
 
 /**
  * Module exports.
@@ -56,18 +57,10 @@ function globalClick (e) {
     fn = cur.value[1];
     inside = false;
 
-    for (element = e.target; element; element = element.parentNode) {
-      if (element === el) {
-        // click inside
-        inside = true;
-        break;
-      }
+    if (!within(e.target, el)) {
+      // click outside
+      fn.call(el, e);
     }
-
-    if (inside) continue;
-
-    // click outside
-    fn.call(el, e);
   }
 }
 

@@ -23,7 +23,8 @@
   "homepage": "https://github.com/TooTallNate/click-outside",
   "dependencies": {
     "component-event": "0.1.4",
-    "es6-map": "0.1.0"
+    "es6-map": "0.1.0",
+    "within-element": "0.1.0"
   },
   "browser": {
     "event": "component-event"
