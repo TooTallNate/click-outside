@@ -7,6 +7,9 @@
     "type": "git",
     "url": "git://github.com/TooTallNate/click-outside.git"
   },
+  "scripts": {
+    "prepublish": "babel -i selfContained -e *.es6 -d ."
+  },
   "keywords": [
     "click",
     "dom",
@@ -23,8 +26,8 @@
   "homepage": "https://github.com/TooTallNate/click-outside",
   "dependencies": {
     "component-event": "0.1.4",
-    "es6-map": "0.1.0",
-    "within-element": "0.1.0"
+    "within-element": "0.1.0",
+    "babel-runtime": "4"
   },
   "browser": {
     "event": "component-event"
