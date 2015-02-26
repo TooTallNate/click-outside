@@ -8,7 +8,7 @@
     "url": "git://github.com/TooTallNate/click-outside.git"
   },
   "scripts": {
-    "prepublish": "babel -i selfContained -e *.es6 -d ."
+    "prepublish": "make build"
   },
   "keywords": [
     "click",
@@ -31,5 +31,8 @@
   },
   "browser": {
     "event": "component-event"
+  },
+  "devDependencies": {
+    "babel": "~4.5.5"
   }
 }
