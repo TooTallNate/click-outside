@@ -3,9 +3,8 @@
  * Module dependencies.
  */
 
-var ev = require('event');
-var Map = require('es6-map');
-var within = require('within-element');
+import ev from 'event';
+import within from 'within-element';
 
 /**
  * Module exports.
