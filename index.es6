@@ -4,7 +4,7 @@
  */
 
 import ev from 'event';
-import within from 'within-element';
+import contains from 'node-contains';
 
 /**
  * Module exports.
@@ -56,7 +56,7 @@ function globalClick (e) {
     fn = cur.value[1];
     inside = false;
 
-    if (!within(e.target, el)) {
+    if (!contains(el, e.target)) {
       // click outside
       fn.call(el, e);
     }

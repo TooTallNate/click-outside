@@ -25,9 +25,9 @@
   },
   "homepage": "https://github.com/TooTallNate/click-outside",
   "dependencies": {
+    "babel-runtime": "4",
     "component-event": "0.1.4",
-    "within-element": "0.1.0",
-    "babel-runtime": "4"
+    "node-contains": "1.0.0"
   },
   "browser": {
     "event": "component-event"
