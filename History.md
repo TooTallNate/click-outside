@@ -1,4 +1,11 @@
 
+1.0.0 / 2015-02-26
+==================
+
+  * use a Makefile for ES6 build
+  * use babel to remove `es6-map` dependency (#1, @coreh)
+  * use "node-contains" module to simplify code
+
 0.1.0 / 2014-05-28
 ==================
 
