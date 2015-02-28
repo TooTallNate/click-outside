@@ -18,7 +18,7 @@ exports.install = install;
  * Hash of elements and callback functions.
  */
 
-var callbacks = new Map();
+let callbacks = new Map();
 
 /**
  * A "click outside" of a given DOM event implementation.
@@ -48,19 +48,12 @@ function clickOutside (el, fn) {
  */
 
 function globalClick (e) {
-  var cur, el, fn, inside, element;
-  var entries = callbacks.entries();
-
-  while ((cur = entries.next()).done !== true) {
-    el = cur.value[0];
-    fn = cur.value[1];
-    inside = false;
-
+  callbacks.forEach(function (fn, el) {
     if (!contains(el, e.target)) {
       // click outside
       fn.call(el, e);
     }
-  }
+  });
 }
 
 function install (doc) {
