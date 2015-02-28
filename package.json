@@ -33,6 +33,6 @@
     "event": "component-event"
   },
   "devDependencies": {
-    "babel": "~4.5.5"
+    "babel": "4"
   }
 }
