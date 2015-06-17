@@ -1,4 +1,9 @@
 
+1.0.4 / 2015-06-17
+==================
+
+  * dont use browser alias for component-event dep (#2, @Useclark)
+
 1.0.3 / 2015-03-09
 ==================
 
