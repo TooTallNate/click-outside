@@ -3,7 +3,7 @@
  * Module dependencies.
  */
 
-import ev from 'event';
+import ev from 'component-event';
 import contains from 'node-contains';
 
 /**

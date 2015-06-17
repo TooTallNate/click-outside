@@ -29,9 +29,6 @@
     "component-event": "0.1.4",
     "node-contains": "1.0.0"
   },
-  "browser": {
-    "event": "component-event"
-  },
   "devDependencies": {
     "babel": "4.7.4"
   }
