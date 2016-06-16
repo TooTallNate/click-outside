@@ -2,13 +2,13 @@
   "name": "click-outside",
   "version": "1.0.4",
   "description": "The inverse of the DOM \"click\" event",
-  "main": "index.js",
+  "main": "build/index.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/TooTallNate/click-outside.git"
   },
   "scripts": {
-    "prepublish": "make build"
+    "prepublish": "n8-make build"
   },
   "keywords": [
     "click",
@@ -25,11 +25,11 @@
   },
   "homepage": "https://github.com/TooTallNate/click-outside",
   "dependencies": {
-    "babel-runtime": "4.7.4",
-    "component-event": "0.1.4",
-    "node-contains": "1.0.0"
+    "babel-runtime": "^6.9.2",
+    "component-event": "^0.1.4",
+    "node-contains": "^1.0.0"
   },
   "devDependencies": {
-    "babel": "4.7.4"
+    "n8-make": "^1.1.0"
   }
 }
