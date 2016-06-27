@@ -7,14 +7,6 @@ import ev from 'component-event';
 import contains from 'node-contains';
 
 /**
- * Module exports.
- */
-
-exports = module.exports = clickOutside;
-exports.globalClick = globalClick;
-exports.install = install;
-
-/**
  * Hash of elements and callback functions.
  */
 
@@ -32,7 +24,7 @@ const callbacks = new Map();
  * @api public
  */
 
-function clickOutside (el, fn) {
+export default function clickOutside (el, fn) {
   callbacks.set(el, fn);
 
   return function unbind () {
@@ -47,7 +39,7 @@ function clickOutside (el, fn) {
  * @api private
  */
 
-function globalClick (e) {
+export function globalClick (e) {
   callbacks.forEach(function (fn, el) {
     if (!contains(el, e.target)) {
       // click outside
@@ -56,7 +48,7 @@ function globalClick (e) {
   });
 }
 
-function install (doc) {
+export function install (doc) {
   if (!doc) doc = document;
   ev.bind(doc, 'click', globalClick);
 }
