@@ -31,6 +31,8 @@ export default function clickOutside (el, fn) {
     callbacks.delete(el);
   };
 }
+clickOutside.globalClick = globalClick;
+clickOutside.install = install;
 
 /**
  * Global "click" event handler.
@@ -39,7 +41,7 @@ export default function clickOutside (el, fn) {
  * @api private
  */
 
-export function globalClick (e) {
+function globalClick (e) {
   callbacks.forEach(function (fn, el) {
     if (!contains(el, e.target)) {
       // click outside
@@ -48,7 +50,7 @@ export function globalClick (e) {
   });
 }
 
-export function install (doc) {
+function install (doc) {
   if (!doc) doc = document;
   ev.bind(doc, 'click', globalClick);
 }
