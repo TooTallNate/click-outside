@@ -1,6 +1,6 @@
 {
   "name": "click-outside",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "The inverse of the DOM \"click\" event",
   "main": "build/index.js",
   "repository": {
